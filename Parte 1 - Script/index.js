@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import readline from "readline";
 import { mostrarMenu } from "./MenuPrincipal.js";
 
-const rl = readline.createInterface({
+export const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });

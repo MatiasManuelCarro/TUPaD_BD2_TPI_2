@@ -1,9 +1,5 @@
 import mongoose from "mongoose";
 
-// Conexión al cluster Atlas
-const uri = "mongodb+srv://TuturnoAdmin:Admin123@cluster0.dsobdqg.mongodb.net/gestionTurnos";
-await mongoose.connect(uri);
-console.log("Conectado a MongoDB Atlas");
 
 //Definición de esquema y modelo
 const usuarioSchema = new mongoose.Schema({

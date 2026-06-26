@@ -1,5 +1,5 @@
-import readline from "readline";
 import mongoose from "mongoose";
+import { rl } from "./index.js";   //importa el readline
 import {
     crearUsuario,
     listarUsuarios,
@@ -7,11 +7,6 @@ import {
     bajaUsuario,
     Usuario
 } from "./TPI_parte2_mongoose.js";
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
 
 export function mostrarMenu() {
     console.log("\n..........................");
