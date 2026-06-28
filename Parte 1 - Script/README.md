@@ -1,7 +1,7 @@
 # Bases de Datos 2 - TPI Parte 2 - Grupo 11 - Matias Carro y Hugo Catalan
 Documentación del Proyecto – Sistema de Gestión de Usuarios (Node.js + MongoDB + Mongoose)
 
-## 1. Introducción del sistema
+## Introducción del sistema
 
 Este proyecto implementa un sistema de gestión de usuarios desarrollado en Node.js, utilizando MongoDB como base de datos NoSQL y Mongoose como ODM.
 El sistema funciona mediante un menú interactivo en consola, permitiendo realizar operaciones CRUD completas:
@@ -20,7 +20,7 @@ El objetivo es aplicar conceptos de Bases de Datos II, integrando:
     Manejo de errores
     Modularización del código
 
-## 2. Tecnologías utilizadas
+## Tecnologías utilizadas
 
     Node.js – Entorno de ejecución JavaScript.
     MongoDB – Base de datos NoSQL orientada a documentos.
@@ -29,7 +29,7 @@ El objetivo es aplicar conceptos de Bases de Datos II, integrando:
     ECMAScript Modules (ESM) – Uso de import / export.
     JavaScript moderno (async/await) – Manejo claro de asincronía.
 
-## 3. Arquitectura del proyecto
+## Arquitectura del proyecto
 
 ```text
 📁 Proyecto
@@ -68,18 +68,19 @@ El objetivo es aplicar conceptos de Bases de Datos II, integrando:
 
         Baja lógica
 
-## 4. Modelo de datos
-### Schema del Usuario
-js
+## Modelo de datos
+#### Schema del Usuario
 
+```js
 const UsuarioSchema = new mongoose.Schema({
     nombre: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     telefono: { type: String, required: true },
     activo: { type: Boolean, default: true }
 }, { timestamps: true });
+```
 
-### Descripción de campos
+#### Descripción de campos
 
 | **Campo**   | **Tipo** | **Descripción**                                   |
 |-------------|----------|---------------------------------------------------|
@@ -89,3 +90,6 @@ const UsuarioSchema = new mongoose.Schema({
 | **activo**  | Boolean  | Indica si el usuario está activo (baja lógica)    |
 | **createdAt** | Date   | Fecha de creación                                 |
 | **updatedAt** | Date   | Fecha de actualización                             |
+
+##  Explicación de funciones CRUD
+

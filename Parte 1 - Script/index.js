@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import readline from "readline";
-import { mostrarMenu } from "./MenuPrincipal.js";
+import { menuPrincipal } from "./MenuPrincipal.js";
 
 export const rl = readline.createInterface({
     input: process.stdin,
@@ -19,7 +19,7 @@ async function iniciar() {
                 //conexion a la BD con el Uniform Resource Identifier armado con el input
                 await mongoose.connect(uri);
                 console.log("\nConectado a MongoDB Atlas");
-                mostrarMenu();
+                menuPrincipal();
             } catch (error) {
                 console.error("\nError al conectar:", error.message);
                 process.exit(1);
