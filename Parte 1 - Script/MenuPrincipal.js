@@ -9,6 +9,9 @@ import {
 
 export function menuPrincipal() {
     console.log("\n==============================");
+    console.log("\nProyecto realizado por");
+    console.log("\nMatias Carro y Hugo Catalan");
+    console.log("\n==============================");
     console.log("=== MENÚ PRINCIPAL ===");
     console.log("1. Gestión de Usuarios");
     console.log("2. Gestión de Profesionales");
